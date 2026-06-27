@@ -1,0 +1,26 @@
+﻿<Window x:Class="RoomNavigationAlgorithm.SpoilerLogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Spoiler Log &amp; Routing" Height="500" Width="600" WindowStartupLocation="CenterOwner">
+    <Grid Background="#1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TabsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,10,10,5" Grid.Row="0">
+            <Button x:Name="BtnRouteExplorable" Content="All Explorable" Width="130" Height="30" Margin="0,0,10,0" Background="#673AB7" Foreground="White" FontWeight="Bold" Click="Tab_Click"/>
+            <Button x:Name="BtnRouteSteps" Content="Least Steps" Width="110" Height="30" Margin="0,0,10,0" Background="#333333" Foreground="White" FontWeight="Bold" Click="Tab_Click"/>
+            <Button x:Name="BtnRouteLocks" Content="Least Locks" Width="110" Height="30" Margin="0,0,10,0" Background="#333333" Foreground="White" FontWeight="Bold" Click="Tab_Click"/>
+            <Button x:Name="BtnRoute100" Content="100% Completion" Width="130" Height="30" Margin="0,0,10,0" Background="#333333" Foreground="White" FontWeight="Bold" Click="Tab_Click"/>
+        </StackPanel>
+
+        <TextBox x:Name="LogTextBox" Grid.Row="1" Margin="10" Background="#2D2D30" Foreground="LightGray" 
+                 FontFamily="Consolas" FontSize="14" IsReadOnly="True" 
+                 TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" BorderBrush="#555"/>
+
+        <Button Grid.Row="2" Content="Save to .txt File" Margin="10" Height="40" 
+                Background="#2196F3" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="SaveButton_Click"/>
+    </Grid>
+</Window>
